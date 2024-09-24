@@ -1,7 +1,8 @@
 package com.flumensistemas.course_evaluations.service;
 
-import com.flumensistemas.course_evaluations.entity.Evaluation;
 import java.util.List;
+
+import com.flumensistemas.course_evaluations.entity.Evaluation;
 
 public interface EvaluationService {
 
@@ -9,6 +10,6 @@ public interface EvaluationService {
     Evaluation getEvaluation(Long id);
     void deleteEvaluation(Long id);
     List<Evaluation> getEvaluations();
-    Evaluation addPreguntaToEvaluacion(Long questionId,Long evaluationId);
+    Evaluation addQuestionToEvaluation(Long questionId,Long evaluationId);
 
 }

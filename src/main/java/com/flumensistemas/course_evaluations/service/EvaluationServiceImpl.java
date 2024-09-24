@@ -45,6 +45,11 @@ public class EvaluationServiceImpl implements EvaluationService {
         return (List<Evaluation>) evaluationRepository.findAll();
     }
 
+    @Override
+    public Evaluation addQuestionToEvaluation(Long questionId, Long evaluationId) {
+        return null;
+    }
+
     static Evaluation unwrapEvaluation(Optional<Evaluation> entity,Long evaluationId){
         if(entity.isPresent()) return entity.get();
         else throw new EvaluationNotFoundException(evaluationId); 
