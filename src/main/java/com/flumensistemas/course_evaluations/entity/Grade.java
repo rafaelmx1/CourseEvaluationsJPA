@@ -2,8 +2,6 @@ package com.flumensistemas.course_evaluations.entity;
 
 import java.time.LocalDate;
 
-import com.flumensistemas.course_evaluations.validation.Score;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,7 +33,6 @@ public class Grade {
 
     @NonNull
     @Column(name="SCORE", nullable = false)
-    @Score
     private Double score;
     
     @Column(name="GRADE_DATE")

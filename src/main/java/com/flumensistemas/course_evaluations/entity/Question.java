@@ -1,11 +1,14 @@
 package com.flumensistemas.course_evaluations.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -14,6 +17,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -79,6 +83,10 @@ public class Question {
     @ManyToOne(optional = false)
     @JoinColumn(name="topic_id",referencedColumnName = "TOPIC_ID")
     private Topic topic;
+
+    @ManyToMany(mappedBy = "questions")
+    @JsonIgnore
+    private Set<Evaluation> evaluations;
 
 
     
