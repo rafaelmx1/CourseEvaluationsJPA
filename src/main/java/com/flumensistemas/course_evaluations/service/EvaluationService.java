@@ -9,5 +9,6 @@ public interface EvaluationService {
     Evaluation getEvaluation(Long id);
     void deleteEvaluation(Long id);
     List<Evaluation> getEvaluations();
+    Evaluation addPreguntaToEvaluacion(Long questionId,Long evaluationId);
 
 }
