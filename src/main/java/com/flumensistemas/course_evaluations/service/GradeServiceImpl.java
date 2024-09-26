@@ -27,8 +27,7 @@ public class GradeServiceImpl implements GradeService {
 
     @Override
     public Grade saveGrade(Grade grade, Long participantId, Long evaluationId) {
-        //Evaluation evaluation = evaluationRepository.findById(evaluationId).get();
-        Evaluation evaluation = EvaluationServiceImpl.unwrapEvaluation(evaluationRepository.findById(evaluationId), evaluationId);
+        Evaluation evaluation = EvaluationServiceImpl.unwrapEvaluation(evaluationRepository.findById(evaluationId),evaluationId);
         Participant participant = ParticipantServiceImpl.unwrapParticipant(participantRepository.findById(participantId),participantId);
         grade.setParticipant(participant);
         grade.setEvaluation(evaluation);

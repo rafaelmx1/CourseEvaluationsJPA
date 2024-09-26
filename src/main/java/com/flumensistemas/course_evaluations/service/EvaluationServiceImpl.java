@@ -50,9 +50,9 @@ public class EvaluationServiceImpl implements EvaluationService {
         return null;
     }
 
-    static Evaluation unwrapEvaluation(Optional<Evaluation> entity,Long evaluationId){
+    static Evaluation unwrapEvaluation(Optional<Evaluation> entity,Long id){
         if(entity.isPresent()) return entity.get();
-        else throw new EvaluationNotFoundException(evaluationId); 
-    }   
+        else throw new EvaluationNotFoundException(id);
+    }
 
 }
