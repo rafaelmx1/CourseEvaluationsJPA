@@ -52,8 +52,8 @@ public class CourseEvaluationsApplication implements CommandLineRunner{
 			participantRepository.save(participant);
 		}
 		Course course = new Course();
-		course.setCourse_name("Curso 1");
-		course.setCourse_status("A");
+		course.setCourseName("Curso 1");
+		course.setCourseStatus("A");
 		course.setId(1L);
 		Topic topic = new Topic();
 		topic.setId(1L);
@@ -66,10 +66,10 @@ public class CourseEvaluationsApplication implements CommandLineRunner{
 		LocalDate specificDate = LocalDate.of(2023, 1, 1);
 		Evaluation ev = new Evaluation();
 		Evaluation ev2 = new Evaluation();
-		ev.setEvaluation_description("Descripción 1");
-		ev2.setEvaluation_description("Descripción 2");
-		ev.setCreation_date(specificDate);
-		ev2.setCreation_date(specificDate);
+		ev.setEvaluationDescription("Descripción 1");
+		ev2.setEvaluationDescription("Descripción 2");
+		ev.setCreationDate(specificDate);
+		ev2.setCreationDate(specificDate);
 		ev.setTopic(topic);
 		ev2.setTopic(topic);
 		Evaluation[] evaluations = new Evaluation[2];

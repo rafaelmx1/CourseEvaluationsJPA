@@ -52,7 +52,7 @@ public class CourseController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Course> updateCourse(@Valid @RequestBody Course course, @PathVariable Long id){
-        return new ResponseEntity<>(courseService.updateCourse(id,course.getCourse_name(),course.getCourse_status()),HttpStatus.OK);
+        return new ResponseEntity<>(courseService.updateCourse(id,course.getCourseName(),course.getCourseStatus()),HttpStatus.OK);
     }
 
     

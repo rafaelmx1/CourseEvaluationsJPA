@@ -1,5 +1,9 @@
 package com.flumensistemas.course_evaluations.entity;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,9 +17,6 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name="COURSE")
@@ -33,12 +34,12 @@ public class Course {
     @NotBlank(message = "Course name cannot be blank")
     @NonNull
     @Column(name="COURSE_NAME", nullable = false, unique=true)
-    private String course_name;
+    private String courseName;
 
     @NotBlank(message = "Course status cannot be blank")
     @NonNull
     @Column(name="COURSE_STATUS",nullable = false)
-    private String course_status;
+    private String courseStatus;
 
     @JsonIgnore
     @OneToMany(mappedBy = "course")

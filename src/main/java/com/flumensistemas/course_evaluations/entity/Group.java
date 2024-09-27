@@ -37,13 +37,13 @@ public class Group {
     @NotBlank(message = "Group name cannot be blank")
     @NonNull
     @Column(name="GROUP_NAME",nullable=false)
-    private String group_name;
+    private String groupName;
 
 
     @Column(name="START_DATE")
-    private LocalDate start_date;
+    private LocalDate startDate;
     @Column(name="END_DATE")
-    private LocalDate end_date;
+    private LocalDate endDate;
 
     @NotBlank(message = "Status name cannot be blank")
     @NonNull

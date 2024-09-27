@@ -42,11 +42,11 @@ public class Evaluation {
     @NotBlank(message = "Evaluation description cannot be blank")
     @NonNull
     @Column(name="EVALUATION_DESCRIPTION", nullable = false, unique=true)
-    private String evaluation_description;
+    private String evaluationDescription;
 
     @NonNull
     @Column(name="CREATION_DATE")
-    private LocalDate creation_date;
+    private LocalDate creationDate;
 
     @ManyToOne(optional = false)
     @JoinColumn(name="topic_id",referencedColumnName = "TOPIC_ID")

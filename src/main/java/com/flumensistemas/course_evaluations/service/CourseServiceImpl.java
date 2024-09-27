@@ -44,8 +44,8 @@ public class CourseServiceImpl implements CourseService {
         Optional<Course> course = courseRepository.findById(courseId);
         if(course.isPresent()) {
             Course unwrappedCourse = course.get();
-            unwrappedCourse.setCourse_name(courseName);
-            unwrappedCourse.setCourse_status(courseStatus);
+            unwrappedCourse.setCourseName(courseName);
+            unwrappedCourse.setCourseStatus(courseStatus);
             return courseRepository.save(unwrappedCourse);
         } else {
             throw new CourseNotFoundException(courseId);
