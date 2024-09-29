@@ -1,7 +1,7 @@
 package com.flumensistemas.course_evaluations.repository;
 
-import java.util.List;
 import org.springframework.data.repository.CrudRepository;
+import java.util.List;
 
 import com.flumensistemas.course_evaluations.entity.Topic;
 

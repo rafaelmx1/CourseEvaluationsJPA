@@ -5,16 +5,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.flumensistemas.course_evaluations.entity.Course;
-import com.flumensistemas.course_evaluations.entity.Evaluation;
-import com.flumensistemas.course_evaluations.entity.Participant;
-import com.flumensistemas.course_evaluations.entity.Topic;
 import com.flumensistemas.course_evaluations.repository.CourseRepository;
 import com.flumensistemas.course_evaluations.repository.EvaluationRepository;
 import com.flumensistemas.course_evaluations.repository.ParticipantRepository;
 import com.flumensistemas.course_evaluations.repository.TopicRepository;
-
-import java.time.LocalDate;
 
 @SpringBootApplication
 public class CourseEvaluationsApplication implements CommandLineRunner{
@@ -33,6 +27,8 @@ public class CourseEvaluationsApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception{
+
+		/* *
 		Course[] courses = new Course[] {
 			new Course("APX","A"),
 			new Course("CELLS","A"),
@@ -78,7 +74,7 @@ public class CourseEvaluationsApplication implements CommandLineRunner{
 		for (Evaluation evaluation : evaluations) {
 			evaluationRepository.save(evaluation);
 		}
-
+*/
 
 	}
 
