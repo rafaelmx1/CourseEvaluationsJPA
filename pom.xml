@@ -96,5 +96,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>backend-itsapp</finalName>
 	</build>
 </project>
